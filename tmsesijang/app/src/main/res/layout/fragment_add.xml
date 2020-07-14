@@ -36,7 +36,8 @@
                     android:layout_weight="1"
                     android:background="#EF9A9A"
                     android:layout_marginRight="10dp"
-                    android:text="촬영 날짜"
+                    android:hint="촬영 날짜"
+                    android:inputType="date"
                     android:gravity="center"
                     android:textColor="#555555"/>
                 <EditText
@@ -45,7 +46,8 @@
                     android:layout_height="25dp"
                     android:layout_weight="1"
                     android:background="#EF9A9A"
-                    android:text="촬영 시간"
+                    android:hint="촬영 시간"
+                    android:inputType="time"
                     android:gravity="center"
                     android:textColor="#555555"/>
             </LinearLayout>
@@ -60,7 +62,7 @@
                     android:layout_weight="1"
                     android:background="#EF9A9A"
                     android:layout_marginRight="10dp"
-                    android:text="카메라 어플"
+                    android:hint="카메라 어플"
                     android:gravity="center"
                     android:textColor="#555555"/>
                 <EditText
@@ -69,7 +71,7 @@
                     android:layout_height="25dp"
                     android:layout_weight="1"
                     android:background="#EF9A9A"
-                    android:text="핸드폰 기종"
+                    android:hint="핸드폰 기종"
                     android:gravity="center"
                     android:textColor="#555555"/>
             </LinearLayout>
@@ -81,7 +83,7 @@
             android:background="@drawable/outline"
             android:layout_marginTop="20dp"
             android:id="@+id/text_text"
-            android:text="사진에 대한 설명"
+            android:hint="사진에 대한 설명"
             android:gravity="center"
             android:textColor="#555555"/>
 
