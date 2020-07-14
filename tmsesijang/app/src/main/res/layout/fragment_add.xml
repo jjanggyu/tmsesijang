@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/upload"
+            android:id="@+id/upload"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:background="@drawable/outline">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/text_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="#EF9A9A"
+                    android:layout_marginRight="10dp"
+                    android:text="촬영 날짜"
+                    android:gravity="center"
+                    android:textColor="#555555"/>
+                <EditText
+                    android:id="@+id/text_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="#EF9A9A"
+                    android:text="촬영 시간"
+                    android:gravity="center"
+                    android:textColor="#555555"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/text_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="#EF9A9A"
+                    android:layout_marginRight="10dp"
+                    android:text="카메라 어플"
+                    android:gravity="center"
+                    android:textColor="#555555"/>
+                <EditText
+                    android:id="@+id/text_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="#EF9A9A"
+                    android:text="핸드폰 기종"
+                    android:gravity="center"
+                    android:textColor="#555555"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/outline"
+            android:layout_marginTop="20dp"
+            android:id="@+id/text_text"
+            android:text="사진에 대한 설명"
+            android:gravity="center"
+            android:textColor="#555555"/>
+
+
+
+    </LinearLayout>
+</ScrollView>
