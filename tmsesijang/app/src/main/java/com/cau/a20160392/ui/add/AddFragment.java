@@ -2,7 +2,11 @@ package com.cau.a20160392.ui.add;
 
 import androidx.lifecycle.ViewModelProviders;
 
+import android.app.Activity;
+import android.content.ContentResolver;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -16,7 +20,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.cau.a20160392.MainActivity;
 import com.cau.a20160392.R;
+import androidx.appcompat.app.AppCompatActivity;
+import java.io.InputStream;
+
+import static android.app.Activity.RESULT_OK;
 
 public class AddFragment extends Fragment {
 
@@ -39,8 +48,9 @@ public class AddFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,"image/*");
-                startActivityForResult(intent, code);
+               intent.setType("image/*");
+               intent.setAction(Intent.ACTION_GET_CONTENT);
+               startActivityForResult(intent,1);
             }
         });
 
@@ -50,11 +60,18 @@ public class AddFragment extends Fragment {
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        if(requestCode == code && data!=null && data.getData()!=null) {
-            Uri selectedImageUri = data.getData();
-            imageView.setImageURI(selectedImageUri);
-
-        }
+       if(resultCode==1){
+           if(resultCode== RESULT_OK){
+               try {
+                   InputStream in = getActivity().getContentResolver().openInputStream(data.getData());
+                   Bitmap img = BitmapFactory.decodeStream(in);
+                   in.close();
+                   imageView.setImageBitmap(img);
+               }catch (Exception e){
+                   e.printStackTrace();
+               }
+           }
+       }
 
     }
     @Override
