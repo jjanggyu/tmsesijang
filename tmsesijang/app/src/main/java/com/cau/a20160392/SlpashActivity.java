@@ -19,6 +19,6 @@ public class SlpashActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(intent);
             }
-        },500);
+        },300);
     }
 }
